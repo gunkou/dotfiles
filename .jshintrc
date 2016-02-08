@@ -1,0 +1,15 @@
+{
+    "globals": {
+        "define": false,
+        "require": false
+    },
+    "globalstrict": false,
+    "singleGroups": false,
+    "debug": true,
+    "strict": true,
+    "browser": true,
+    "browserify": true,
+    "devel": true,
+    "jasmine": true,
+    "mocha": true
+}
