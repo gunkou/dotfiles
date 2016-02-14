@@ -52,6 +52,8 @@ NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'kosei27/endtagcomment.vim'
 " レジスタの履歴を取得・再利用する
 NeoBundle 'LeafCage/yankround.vim'
+" シンタックスチェック
+NeoBundle 'scrooloose/syntastic'
 
 " NeoBundle 管理終了
 call neobundle#end()
@@ -279,6 +281,36 @@ let g:user_emmet_settings = {
 \ 'lang' : 'ja'
 \ }
 \}
+
+"" ------------------------------------
+"" syntastic
+"" ------------------------------------
+" ファイルオープン時にはチェックをしない
+let g:syntastic_check_on_open = 0
+
+" wq時にチェックを行わない
+let g:syntastic_check_on_wq = 0
+
+" ファイル保存時にはチェックを実施
+let g:syntastic_check_on_save = 1
+
+" エラーのときQuickfixが立ち上がる
+let g:syntastic_auto_loc_list = 1
+
+" チェックマーク
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '⚠'
+
+" scssの設定
+let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_scss_scss_lint_args = '--config=%HOMEPATH%\dotfiles\.scss-lint.yml'
+
+" JavaScriptの設定
+let g:syntastic_javascript_checkers = ['jscs', 'jshint']
+let g:syntastic_javascript_jscs_args = '--config=%HOMEPATH%\dotfiles\.jscsrc'
+let g:syntastic_javascript_jshint_args = '--config=%HOMEPATH%\dotfiles\.jshintrc'
 
 "" ------------------------------------
 "" nerdtree

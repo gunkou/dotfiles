@@ -1,6 +1,4 @@
 # SCSS-Lint Configurations
-# Time-stamp: <2015-01-09T12:06:16+09:00>
-#
 # see also:
 # https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
@@ -12,6 +10,8 @@ linters:
     enabled: true
   ColorKeyword:
     enabled: true
+  ColorVariable:
+    enabled: false
   Comment:
     enabled: false
   DebugStatement:
@@ -94,7 +94,7 @@ linters:
   SpaceBeforeBrace:
     enabled: true
     allow_single_line_padding: false
-    style: 'new_line'
+    style: 'space'
   SpaceBetweenParens:
     enabled: true
     spaces: 0
