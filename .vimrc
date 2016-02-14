@@ -83,6 +83,13 @@ set nobackup
 set noswapfile
 set noundofile
 
+" Undoの永続化、undoフォルダ作成すること
+" 肥大化するこで定期的に削除
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
+
 " 画面最下行にルーラーを表示する
 set ruler
 
