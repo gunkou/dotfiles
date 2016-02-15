@@ -63,7 +63,7 @@ call neobundle#end()
 filetype plugin indent on
 
 " インストールチェック
-NeoBundleCheck
+" NeoBundleCheck
 
 "" ============================================================================
 "" 各種設定 start
@@ -93,8 +93,14 @@ endif
 " 画面最下行にルーラーを表示する
 set ruler
 
-" 行番号を非表示
+" 行番号を表示
 set number
+
+" 行番号の幅を前後1スペース設ける
+augroup numberwidth
+    autocmd!
+    autocmd BufEnter,WinEnter,BufWinEnter * let &l:numberwidth = len(line("$")) + 2
+augroup END
 
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
@@ -299,16 +305,19 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " ファイル保存時にはチェックを実施
-let g:syntastic_check_on_save = 1
+let g:syntastic_check_on_save = 0
 
 " エラーのときQuickfixが立ち上がる
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_auto_loc_list = 0
 
 " チェックマーク
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
+" let g:syntastic_error_symbol='✗'
+" let g:syntastic_warning_symbol='⚠'
+" let g:syntastic_style_error_symbol = '✗'
+" let g:syntastic_style_warning_symbol = '⚠'
+
+" キーマップ
+nnoremap <silent> sy :SyntasticCheck<CR>
 
 " scssの設定
 let g:syntastic_scss_checkers = ['scss_lint']
