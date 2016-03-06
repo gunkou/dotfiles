@@ -3,7 +3,8 @@ set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 
 "" カラースキーム
-colorscheme desert
+colorscheme kellys
+
 "" 半透明
 autocmd FocusGained * set transparency=230
 autocmd FocusLost * set transparency=128
