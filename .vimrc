@@ -52,6 +52,10 @@ NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'LeafCage/yankround.vim'
 " シンタックスチェック
 NeoBundle 'scrooloose/syntastic'
+" マークダウンプレビュー
+NeoBundle 'kannokanno/previm'
+" URLオープン
+NeoBundle 'open-browser.vim'
 
 " NeoBundle 管理終了
 call neobundle#end()
@@ -558,6 +562,15 @@ function! Endtagcomment_firstclass_symbol_toggle()
 endfunction
 "" keymap
 nnoremap <silent> ,t.  :<C-u>call Endtagcomment_firstclass_symbol_toggle()<CR>
+
+
+"" ------------------------------------
+"" マークダウン
+"" ------------------------------------
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
 
 "" ============================================================================
 "" 各種設定 end
