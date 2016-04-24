@@ -48,6 +48,8 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
 " JavaScriptのシンタックス拡張
 NeoBundle 'taichouchou2/vim-javascript'
+" css comb
+NeoBundle 'csscomb/vim-csscomb'
 " レジスタの履歴を取得・再利用する
 NeoBundle 'LeafCage/yankround.vim'
 " シンタックスチェック
@@ -266,10 +268,10 @@ endif
 "" キーマップ設定
 "" ----------------------------------------------------------------------------
 " 挿入モードでのカーソル移動
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
+" inoremap <C-j> <Down>
+" inoremap <C-k> <Up>
+" inoremap <C-h> <Left>
+" inoremap <C-l> <Right>
 
 " 数字のインクリメント、デクリメントのキーマップ変更
 nnoremap + <C-a>
