@@ -189,6 +189,7 @@
             "text-align-last",
             "vertical-align",
             "white-space",
+            "direction",
             "text-decoration",
             "text-emphasis",
             "text-emphasis-color",

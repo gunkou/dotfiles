@@ -333,7 +333,7 @@ let g:syntastic_javascript_jshint_args = '--config=%USERPROFILE%\dotfiles\.jshin
 
 " 今のところ手動でチェック
 let g:syntastic_mode_map = { 'mode': 'active',
-  \ 'passive_filetypes': ['scss', 'javascript'] }
+  \ 'passive_filetypes': ['html','xhtml','scss','javascript'] }
 
 " キーマップ
 nnoremap <silent> sc :SyntasticCheck<CR>
