@@ -28,6 +28,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 " Unite.vimで最近使ったファイルを表示できるようにする
 NeoBundle 'Shougo/neomru.vim'
+" アウトライン
+NeoBundle 'Shougo/unite-outline'
 " ファイルをtree表示してくれる
 NeoBundle 'scrooloose/nerdtree'
 " 補完
