@@ -22,7 +22,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "" ----------------------------------------------------------------------------
 "" NeoBundle install packages
-"" :NeoBundleInstall :NeoBundleUpdate :NeoBundleClean :NeoBundleList
 "" ----------------------------------------------------------------------------
 " ファイルオープンを便利に
 NeoBundle 'Shougo/unite.vim'
@@ -42,24 +41,37 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'tomtom/tcomment_vim'
 " テキストオブジェクトの拡張
 NeoBundle 'tpope/vim-surround'
-" emmet
-NeoBundle 'mattn/emmet-vim'
-" css3のシンタックス拡張
-NeoBundle 'hail2u/vim-css3-syntax'
-" html5のシンタックス拡張
-NeoBundle 'othree/html5.vim'
-" JavaScriptのシンタックス拡張
-NeoBundle 'taichouchou2/vim-javascript'
-" css comb
-NeoBundle 'csscomb/vim-csscomb'
 " レジスタの履歴を取得・再利用する
 NeoBundle 'LeafCage/yankround.vim'
 " シンタックスチェック
 NeoBundle 'scrooloose/syntastic'
-" マークダウンプレビュー
-NeoBundle 'kannokanno/previm'
 " URLオープン
 NeoBundle 'open-browser.vim'
+" プロジェクト固有の設定を読み込む
+NeoBundle 'thinca/vim-localrc'
+" マークダウンプレビュー
+NeoBundle 'kannokanno/previm'
+" html5のシンタックス拡張
+NeoBundleLazy 'othree/html5.vim',{
+\"autoload" : {"filetypes" :["html"]}
+\}
+" emmet
+NeoBundleLazy 'mattn/emmet-vim',{
+\"autoload" : {"filetypes" :["html"]}
+\}
+" css3のシンタックス拡張
+NeoBundleLazy 'hail2u/vim-css3-syntax',{
+\"autoload" : {"filetypes" :["css", "scss"]}
+\}
+" css comb
+NeoBundleLazy 'csscomb/vim-csscomb',{
+\"autoload" : {"filetypes" :["css", "scss"]}
+\}
+" JavaScriptのシンタックス拡張
+NeoBundleLazy 'taichouchou2/vim-javascript',{
+\"autoload" : {"filetypes" :["javascript"]}
+\}
+
 
 " NeoBundle 管理終了
 call neobundle#end()
@@ -290,6 +302,10 @@ nnoremap <leader>. :lcd %:p:h<CR>
 
 " Opens a tab edit command with the path of the currently edited file filled
 " noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" 開いているHTMLをchromeで開く　：「\　shift + w」
+noremap <Leader>W :silent !　start chrome.exe "%"<CR>
+
 
 "" ----------------------------------------------------------------------------
 "" プラグインなど
@@ -583,6 +599,19 @@ augroup END
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+
+"" ------------------------------------
+"" thinca/vim-localrc 設定例
+"" ------------------------------------
+" 1) ローカル: .local.vimrc作成
+" 2) カレントディレクトに移動: lcd <sfile>:h
+" 3) タブの設定
+" setlocal noautoindent tabstop=1 softtabstop=0 shiftwidth=0
+" augroup fileTypeIndent
+"    autocmd!
+"    autocmd BufNewFile,BufRead *.html setlocal noautoindent tabstop=1 softtabstop=0 shiftwidth=0
+" augroup END
 
 "" ============================================================================
 "" 各種設定 end
