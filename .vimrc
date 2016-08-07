@@ -52,25 +52,15 @@ NeoBundle 'thinca/vim-localrc'
 " マークダウンプレビュー
 NeoBundle 'kannokanno/previm'
 " html5のシンタックス拡張
-NeoBundleLazy 'othree/html5.vim',{
-\"autoload" : {"filetypes" :["html"]}
-\}
+NeoBundle 'othree/html5.vim'
 " emmet
-NeoBundleLazy 'mattn/emmet-vim',{
-\"autoload" : {"filetypes" :["html"]}
-\}
+NeoBundle 'mattn/emmet-vim'
 " css3のシンタックス拡張
-NeoBundleLazy 'hail2u/vim-css3-syntax',{
-\"autoload" : {"filetypes" :["css", "scss"]}
-\}
+NeoBundle 'hail2u/vim-css3-syntax'
 " css comb
-NeoBundleLazy 'csscomb/vim-csscomb',{
-\"autoload" : {"filetypes" :["css", "scss"]}
-\}
+NeoBundle 'csscomb/vim-csscomb'
 " JavaScriptのシンタックス拡張
-NeoBundleLazy 'taichouchou2/vim-javascript',{
-\"autoload" : {"filetypes" :["javascript"]}
-\}
+NeoBundle 'taichouchou2/vim-javascript'
 
 
 " NeoBundle 管理終了
@@ -111,6 +101,9 @@ if has('persistent_undo')
   set undofile
 endif
 
+" ファイル保存時の場所を、開いているファイルが有る場所に設定
+set browsedir=buffer
+
 " 画面最下行にルーラーを表示する
 set ruler
 
@@ -146,6 +139,9 @@ set showmatch
 
 " カーソルに飛ぶ時間を設定
 set matchtime=1
+
+" 外部でファイルに変更がされた場合は読みなおす
+set autoread
 
 "" ------------------------------------
 "" 文字コード、改行コード
