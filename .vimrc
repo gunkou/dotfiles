@@ -47,6 +47,8 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'scrooloose/syntastic'
 " URLオープン
 NeoBundle 'open-browser.vim'
+" テキスト整形
+NeoBundle 'junegunn/vim-easy-align'
 " プロジェクト固有の設定を読み込む
 NeoBundle 'thinca/vim-localrc'
 " マークダウンプレビュー
@@ -608,6 +610,17 @@ vmap gx <Plug>(openbrowser-smart-search)
 "    autocmd!
 "    autocmd BufNewFile,BufRead *.html setlocal noautoindent tabstop=1 softtabstop=0 shiftwidth=0
 " augroup END
+
+
+"" ------------------------------------
+"" vim-easy-align
+"" ------------------------------------
+" ヴィジュアルモードで選択し，easy-align 呼んで整形．(e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 
 "" ============================================================================
 "" 各種設定 end
