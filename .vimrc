@@ -106,6 +106,9 @@ endif
 " ファイル保存時の場所を、開いているファイルが有る場所に設定
 set browsedir=buffer
 
+" ツールバーを非表示にする
+set guioptions-=T
+
 " 画面最下行にルーラーを表示する
 set ruler
 
