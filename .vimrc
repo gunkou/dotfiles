@@ -342,8 +342,11 @@ let g:syntastic_loc_list_height = 5
 " let g:syntastic_style_warning_symbol = '⚠'
 
 " scssの設定
-let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_scss_scss_lint_args = '--config=%USERPROFILE%\dotfiles\.scss-lint.yml'
+"let g:syntastic_scss_checkers = ['scss_lint']
+"let g:syntastic_scss_scss_lint_args = '--config=%USERPROFILE%\dotfiles\.scss-lint.yml'
+
+let g:syntastic_css_checkers = ['stylelint']
+let g:syntastic_css_stylelint_args = '--config=%USERPROFILE%\dotfiles\.stylelintrc'
 
 " JavaScriptの設定
 let g:syntastic_javascript_checkers = ['jscs', 'jshint']
@@ -352,7 +355,7 @@ let g:syntastic_javascript_jshint_args = '--config=%USERPROFILE%\dotfiles\.jshin
 
 " 今のところ手動でチェック
 let g:syntastic_mode_map = { 'mode': 'active',
-  \ 'passive_filetypes': ['html','xhtml','scss','javascript'] }
+  \ 'passive_filetypes': ['html','xhtml','scss','css','javascript'] }
 
 " キーマップ
 nnoremap <silent> sc :SyntasticCheck<CR>
