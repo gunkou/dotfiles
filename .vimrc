@@ -31,6 +31,8 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
 " ファイルをtree表示してくれる
 NeoBundle 'scrooloose/nerdtree'
+" 多重でファイルを開かないようにする
+NeoBundle 'macros/editexisting.vim'
 " 補完
 NeoBundle 'Shougo/neocomplete.vim'
 " インデントに色を付けて見やすくする
@@ -292,6 +294,9 @@ endif
 nnoremap + <C-a>
 nnoremap - <C-x>
 
+" 検索結果ハイライトをESCキーの連打でリセット
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
 "" ----------------------------------------------------------------------------
 "" そのほか
 "" ----------------------------------------------------------------------------
@@ -345,6 +350,7 @@ let g:syntastic_loc_list_height = 5
 "let g:syntastic_scss_checkers = ['scss_lint']
 "let g:syntastic_scss_scss_lint_args = '--config=%USERPROFILE%\dotfiles\.scss-lint.yml'
 
+" cssの設定
 let g:syntastic_css_checkers = ['stylelint']
 let g:syntastic_css_stylelint_args = '--config=%USERPROFILE%\dotfiles\.stylelintrc'
 
