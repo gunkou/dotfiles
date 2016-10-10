@@ -66,7 +66,6 @@ NeoBundle 'csscomb/vim-csscomb'
 " JavaScriptのシンタックス拡張
 NeoBundle 'taichouchou2/vim-javascript'
 
-
 " NeoBundle 管理終了
 call neobundle#end()
 
@@ -226,13 +225,13 @@ set shiftwidth=4
 " いくつの連続した空白を1回で削除できるようにするか
 set softtabstop=4
 
-" tabキーを押すとスペースが入力される
+" tabキーを押すとスペースが入力
 set expandtab
 
-" 改行した時に自動でインデントします
+" 改行した時に自動でインデント
 set autoindent
 
-" {があると次の行は自動で1段深く自動インデントしてくれる
+" {があると次の行は自動で1段深く自動インデント
 set smartindent
 
 " 拡張子ごとにインデントを変更
@@ -632,6 +631,12 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+
+"" ------------------------------------
+"" editexisting
+"" ------------------------------------
+runtime macros/editexisting.vim
 
 
 "" ============================================================================
