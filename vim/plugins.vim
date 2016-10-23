@@ -334,3 +334,41 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+
+" ------------------------------------
+" vim-precious
+" ------------------------------------
+let g:context_filetype#filetypes = {
+    \ 'html': [
+    \   {
+    \    'start':
+    \     '<script\%( [^>]*\)\?\%( [^>]*\)\?>',
+    \    'end': '</script>', 'filetype': 'javascript',
+    \   },
+    \   {
+    \    'start': '<style\%( [^>]*\)\?\%( [^>]*\)\?>',
+    \    'end': '</style>', 'filetype': 'css',
+    \   },
+    \   {
+    \    'start': '<?php\?',
+    \    'end': '?>', 'filetype': 'php',
+    \   }
+    \ ],}
+" }}}
+
+" insert mode に入った時に 'filetype' を切り換える。
+" カーソル移動時の自動切り替えを無効化
+let g:precious_enable_switch_CursorMoved = {
+ \ "*" : 0
+ \}
+let g:precious_enable_switch_CursorMoved_i = {
+ \ "*" : 0
+ \}
+
+" insert に入った時にスイッチし、抜けた時に元に戻す
+augroup test
+  autocmd!
+  autocmd InsertEnter * :PreciousSwitch
+  autocmd InsertLeave * :PreciousReset
+augroup END

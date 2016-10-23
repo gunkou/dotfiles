@@ -11,11 +11,8 @@ set cursorline
 " font
 set guifont=MyricaM_M:h12:cSHIFTJIS
 
-" カラースキーム
-colorscheme kellys
-
 " 半透明
-autocmd FocusGained * set transparency=230
+autocmd FocusGained * set transparency=240
 autocmd FocusLost * set transparency=128
 
 " ウィンドウいっぱいに開く
@@ -23,3 +20,18 @@ au GUIEnter * simalt ~x
 
 " アンダーラインを引く(gui)
 highlight CursorLine gui=underline guifg=NONE guibg=NONE
+
+" ------------------------------------
+" termguicolors
+" ------------------------------------
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Theme
+syntax enable
+colorscheme tender

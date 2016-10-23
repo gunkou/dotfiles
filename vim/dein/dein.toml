@@ -11,65 +11,67 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'Shougo/vimshell'
 rev  = '3787e5'
 
-# ファイルオープン
-[[plugins]]
+[[plugins]] # ファイルオープン
 repo = 'Shougo/unite.vim'
 
-# Unite.vimで最近使ったファイルを表示
-[[plugins]]
+[[plugins]] # Unite.vimで最近使ったファイルを表示
 repo = 'Shougo/neomru.vim'
 
-# アウトライン
-[[plugins]]
+[[plugins]] # アウトライン
 repo = 'Shougo/unite-outline'
 
-# 補完
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
+repo = 'Shougo/context_filetype.vim'
 
-# ファイルをtree表示
+[[plugins]] # 補完
+repo = 'Shougo/neocomplete.vim'
+lazy = 1
+on_i = 1
+
 [[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+
+[[plugins]] # ファイルをtree表示
 repo = 'scrooloose/nerdtree'
 
-# インデントに色を付けて見やすくする
-[[plugins]]
+[[plugins]] # インデントに色を付ける
 repo = 'nathanaelkane/vim-indent-guides'
 
-# 行末の半角スペースを可視化
-[[plugins]]
+[[plugins]] # 行末の半角スペースを可視化
 repo = 'bronson/vim-trailing-whitespace'
 
-# テキストオブジェクトの拡張
-[[plugins]]
+[[plugins]] # テキストオブジェクトの拡張
 repo = 'tpope/vim-surround'
 
-# レジスタの履歴を取得・再利用する
-[[plugins]]
+[[plugins]] # レジスタの履歴を取得・再利用する
 repo = 'LeafCage/yankround.vim'
 
-# シンタックスチェック
-[[plugins]]
+[[plugins]] # シンタックスチェック
 repo = 'scrooloose/syntastic'
 
-# URLオープン
-[[plugins]]
+[[plugins]] # URLオープン
 repo = 'open-browser.vim'
+lazy = 1
+on_map = ['<Plug>(openbrowser-smart-search)']
 
-# テキスト整形
-[[plugins]]
+[[plugins]] # テキスト整形
 repo = 'junegunn/vim-easy-align'
 
-# プロジェクト固有の設定を読み込む
-[[plugins]]
+[[plugins]] # プロジェクト固有の設定を読み込む
 repo = 'thinca/vim-localrc'
 
-# コメントON/OFF
-[[plugins]]
+[[plugins]] # コメントON/OFF
 repo = 'tomtom/tcomment_vim'
 
-# マークダウンプレビュー
-[[plugins]]
+[[plugins]] # マークダウンプレビュー
 repo = 'kannokanno/previm'
+lazy = 1
+on_ft = ['md']
+on_cmd = ['PrevimOpen']
+
+[[plugins]] # カラースキーム
+repo = 'jacoborus/tender'
 
 # ------------------------------------
 # HTML,CSS,JavaScript
@@ -85,6 +87,9 @@ repo = 'hail2u/vim-css3-syntax'
 
 [[plugins]]
 repo = 'csscomb/vim-csscomb'
+lazy = 1
+on_ft = ['css,scss']
+on_cmd = ['CSScomb']
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
