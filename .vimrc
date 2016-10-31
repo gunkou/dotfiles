@@ -235,6 +235,12 @@ nnoremap <leader>. :lcd %:p:h<CR>
 " 開いているHTMLをchromeで開く　：「\　shift + w」
 noremap <Leader>W :silent !　start chrome.exe "%"<CR>
 
+" 入力補完
+inoremap { {}<Left>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap ( ()<ESC>i
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
 
 " -----------------------------------------------------------------------------
 " プラグインなど
