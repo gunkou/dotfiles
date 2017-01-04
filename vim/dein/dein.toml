@@ -73,11 +73,23 @@ on_cmd = ['PrevimOpen']
 [[plugins]] # カラースキーム
 repo = 'jacoborus/tender'
 
+[[plugins]] # 複数の検索結果のハイライト
+repo = 't9md/vim-quickhl'
+
+[[plugins]] # ビジュアルモードで選択した文字列を検索
+repo = 'thinca/vim-visualstar'
+
 # ------------------------------------
 # HTML,CSS,JavaScript
 # ------------------------------------
 [[plugins]]
 repo = 'othree/html5.vim'
+
+[[plugins]] # curl必須
+repo = 'hokaccha/vim-html5validator'
+lazy = 1
+on_ft = ['html']
+on_cmd = ['HTML5Validate']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
