@@ -68,8 +68,11 @@ endif
 " ファイル保存時の場所を、開いているファイルが有る場所に設定
 set browsedir=buffer
 
-" ツールバーを非表示にする
+" ツールバーを非表示
 set guioptions-=T
+
+"メニューを非表示
+set guioptions-=m
 
 " 画面最下行にルーラーを表示する
 set ruler
@@ -107,6 +110,8 @@ set matchtime=1
 " 外部でファイルに変更がされた場合は読みなおす
 set autoread
 
+" gvimでファイル保存ダイアログの初期ディレクトリ設定
+set browsedir=buffer
 
 " ------------------------------------
 " 文字コード、改行コード
@@ -269,6 +274,10 @@ inoremap { {}<Left>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap ( ()<ESC>i
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
+" ドラッグ＆ドロップでファイルを開くとき、常に新しいタブで開く ※複数ファイル未対応
+autocmd VimEnter * tab all
+autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
 
 
 " -----------------------------------------------------------------------------

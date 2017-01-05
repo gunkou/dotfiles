@@ -12,7 +12,7 @@ set cursorline
 set guifont=MyricaM_M:h12:cSHIFTJIS
 
 " 半透明
-autocmd FocusGained * set transparency=240
+autocmd FocusGained * set transparency=220
 autocmd FocusLost * set transparency=128
 
 " ウィンドウいっぱいに開く
@@ -35,3 +35,6 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Theme
 syntax enable
 colorscheme tender
+
+" 背景色だけ変更
+hi Normal guibg=#282C34
