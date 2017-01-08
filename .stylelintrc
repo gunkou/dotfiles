@@ -14,10 +14,10 @@
     "function-max-empty-lines": 0,
     "function-name-case": "lower",
     "function-parentheses-newline-inside": "always-multi-line",
-    "function-parentheses-space-inside": "never-single-line",
+    "function-parentheses-space-inside": "never",
     "function-url-quotes": "always",
     "function-whitespace-after": "always",
-    "number-leading-zero": "always",
+    "number-leading-zero": "never",
     "number-max-precision": 6,
     "number-no-trailing-zeros": true,
     "string-no-newline": true,
@@ -30,13 +30,12 @@
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
     "value-list-max-empty-lines": 0,
-    "shorthand-property-no-redundant-values": true,
     "property-case": "lower",
     "keyframe-declaration-no-important": true,
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
     "declaration-colon-newline-after": "always-multi-line",
-    "declaration-colon-space-after": "always-single-line",
+    "declaration-colon-space-after": "always",
     "declaration-colon-space-before": "never",
     "declaration-property-value-blacklist": {
       "/^transition/": [
@@ -82,7 +81,15 @@
     "selector-attribute-quotes": "always",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
-    "selector-no-qualifying-type": true,
+    "selector-no-qualifying-type": [
+        true,
+        {
+          "ignore": [
+            "attribute",
+            "class"
+          ]
+        }
+    ],
     "selector-pseudo-class-case": "lower",
     "selector-pseudo-class-parentheses-space-inside": "never",
     "selector-pseudo-element-case": "lower",
@@ -91,10 +98,10 @@
     "selector-type-case": "lower",
     "selector-max-empty-lines": 0,
     "selector-list-comma-newline-after": "always",
-    "selector-list-comma-space-after": "always",
+    "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never",
     "rule-nested-empty-line-before": [
-      "always-multi-line",
+      "never-multi-line",
       {
         "except": [
           "first-nested"
@@ -105,10 +112,13 @@
       }
     ],
     "rule-non-nested-empty-line-before": [
-      "always-multi-line",
+      "always",
       {
         "ignore": [
           "after-comment"
+        ],
+        "except": [
+          "after-single-line-comment"
         ]
       }
     ],
@@ -146,7 +156,6 @@
         ]
       }
     ],
-    "max-nesting-depth": 3,
     "no-duplicate-selectors": true,
     "no-eol-whitespace": true,
     "no-extra-semicolons": true,
