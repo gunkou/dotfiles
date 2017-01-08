@@ -58,9 +58,6 @@ on_map = ['<Plug>(openbrowser-smart-search)']
 [[plugins]] # テキスト整形
 repo = 'junegunn/vim-easy-align'
 
-[[plugins]] # プロジェクト固有の設定を読み込む
-repo = 'thinca/vim-localrc'
-
 [[plugins]] # コメントON/OFF
 repo = 'tomtom/tcomment_vim'
 
@@ -79,6 +76,9 @@ repo = 't9md/vim-quickhl'
 [[plugins]] # ビジュアルモードで選択した文字列を検索
 repo = 'thinca/vim-visualstar'
 
+[[plugins]] # プロジェクト固有の設定を読み込む
+repo = 'thinca/vim-localrc'
+
 [[plugins]] # editorconfig
 repo = 'sgur/vim-editorconfig'
 
@@ -94,6 +94,9 @@ repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'kewah/vim-stylefmt'
 
 [[plugins]]
 repo = 'csscomb/vim-csscomb'

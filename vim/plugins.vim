@@ -50,20 +50,26 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
 
+" htmlの設定
+let g:syntastic_html_checkers = ['htmlhint']
+let g:syntastic_html_htmlhint_args = '--config=%USERPROFILE%\dotfiles\.htmlhintrc'
+
 " scssの設定
-"let g:syntastic_scss_checkers = ['scss_lint']
-"let g:syntastic_scss_scss_lint_args = '--config=%USERPROFILE%\dotfiles\.scss-lint.yml'
+let g:syntastic_scss_checkers = ['stylelint', 'scss_lint']
+let g:syntastic_scss_scss_lint_args = '--config=%USERPROFILE%\dotfiles\.scss-lint.yml'
+let g:syntastic_scss_stylelint_args = '--config=%USERPROFILE%\dotfiles\.stylelintrc'
 
 " cssの設定
 let g:syntastic_css_checkers = ['stylelint']
 let g:syntastic_css_stylelint_args = '--config=%USERPROFILE%\dotfiles\.stylelintrc'
 
 " JavaScriptの設定
-let g:syntastic_javascript_checkers = ['jscs', 'jshint']
+let g:syntastic_javascript_checkers = ['jscs', 'jshint', 'eslint']
+let g:syntastic_javascript_eslint_args = '--config=%USERPROFILE%\dotfiles\.eslintrc'
 let g:syntastic_javascript_jscs_args = '--config=%USERPROFILE%\dotfiles\.jscsrc'
 let g:syntastic_javascript_jshint_args = '--config=%USERPROFILE%\dotfiles\.jshintrc'
 
-" 今のところ手動でチェック
+" 手動でチェック
 let g:syntastic_mode_map = { 'mode': 'active',
   \ 'passive_filetypes': ['html','xhtml','scss','css','javascript'] }
 
