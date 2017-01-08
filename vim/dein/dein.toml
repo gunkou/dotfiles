@@ -79,17 +79,15 @@ repo = 't9md/vim-quickhl'
 [[plugins]] # ビジュアルモードで選択した文字列を検索
 repo = 'thinca/vim-visualstar'
 
+[[plugins]] # editorconfig
+repo = 'sgur/vim-editorconfig'
+
+
 # ------------------------------------
 # HTML,CSS,JavaScript
 # ------------------------------------
 [[plugins]]
 repo = 'othree/html5.vim'
-
-[[plugins]] # curl必須
-repo = 'hokaccha/vim-html5validator'
-lazy = 1
-on_ft = ['html']
-on_cmd = ['HTML5Validate']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
