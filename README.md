@@ -16,6 +16,9 @@
 git clone https://github.com/Shougo/dein.vim
 ```
 
+- ctagsインストール
+    - [Win32版(バイナリのみ)](http://hp.vector.co.jp/authors/VA025040/ctags/) をダウンロードして、Vimのディレクトリに追加
+
 - フォント
     - [Myrica](https://github.com/tomokuni/Myrica)
 
