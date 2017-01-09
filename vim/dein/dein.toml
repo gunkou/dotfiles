@@ -79,6 +79,9 @@ repo = 'thinca/vim-visualstar'
 [[plugins]] # プロジェクト固有の設定を読み込む
 repo = 'thinca/vim-localrc'
 
+[[plugins]] # 同じファイルの同時起動防止
+repo = 'thinca/vim-singleton'
+
 [[plugins]] # editorconfig
 repo = 'sgur/vim-editorconfig'
 

@@ -32,11 +32,8 @@ endif
 
 "End dein Scripts-------------------------
 
-" kaoriya同封のプラグイン有効
 " ’%‘で対応タグに移動するプラグインを有効化
 source $VIMRUNTIME/macros/matchit.vim
-" 同じファイルを開かないようにする
-" source $VIMRUNTIME/macros/editexisting.vim
 
 
 " =============================================================================
