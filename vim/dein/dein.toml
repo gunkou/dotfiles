@@ -89,6 +89,9 @@ repo = 'sgur/vim-editorconfig'
 # ------------------------------------
 # HTML,CSS,JavaScript
 # ------------------------------------
+[[plugins]] # 整形
+repo = 'maksimr/vim-jsbeautify'
+
 [[plugins]]
 repo = 'othree/html5.vim'
 
