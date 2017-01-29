@@ -29,6 +29,7 @@ let g:indent_guides_guide_size=1
 " ------------------------------------
 " emmet
 " ------------------------------------
+let g:user_emmet_leader_key = '<C-e>'
 let g:user_emmet_settings = {
 \ 'variables': {
 \ 'lang' : 'ja'
@@ -88,7 +89,7 @@ nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-t> :NERDTreeToggle<CR>
 
 
 " ------------------------------------
