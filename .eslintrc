@@ -73,8 +73,12 @@
     ],
     "no-spaced-func": 2,
     "space-before-function-paren": [
-      2,
-      "always"
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "ignore"
+      }
     ],
     "array-bracket-spacing": [
       2,
