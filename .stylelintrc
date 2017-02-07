@@ -100,25 +100,14 @@
     "selector-list-comma-newline-after": "always",
     "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never",
-    "rule-nested-empty-line-before": [
+    "rule-empty-line-before": [
       "never-multi-line",
       {
         "except": [
-          "first-nested"
-        ],
-        "ignore": [
-          "after-comment"
-        ]
-      }
-    ],
-    "rule-non-nested-empty-line-before": [
-      "always",
-      {
-        "ignore": [
-          "after-comment"
-        ],
-        "except": [
           "after-single-line-comment"
+        ],
+        "ignore": [
+          "after-comment"
         ]
       }
     ],
@@ -141,6 +130,7 @@
           "first-nested"
         ],
         "ignore": [
+          "after-comment",
           "stylelint-commands"
         ]
       }
