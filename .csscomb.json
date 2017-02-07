@@ -69,7 +69,7 @@
             "flex-align",
             "justify-content",
             "align-items",
-            "align-content"
+            "align-content",
             "order",
             "flex",
             "flex-grow",
