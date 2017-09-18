@@ -48,7 +48,7 @@ repo = 'tpope/vim-surround'
 repo = 'LeafCage/yankround.vim'
 
 [[plugins]] # シンタックスチェック
-repo = 'scrooloose/syntastic'
+repo = 'w0rp/ale'
 
 [[plugins]] # URLオープン
 repo = 'open-browser.vim'
