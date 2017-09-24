@@ -44,8 +44,8 @@ hi Normal guibg=#282C34
 " 80行目に色を付ける
 set colorcolumn=80
 
-" カレント行ハイライトON
-set cursorline
+" カレント行ハイライトを明示的にOFF
+set nocursorline
 
-" アンダーラインを引く(gui)
-highlight CursorLine gui=underline guifg=NONE guibg=NONE
+" 行番号の相対表示を明示的にOFF
+set norelativenumber
