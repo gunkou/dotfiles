@@ -38,17 +38,24 @@ let g:user_emmet_settings = {
 
 
 " ------------------------------------
-" syntastic
+" ale
+" ローカルのnpmで動かす
+" npm install stylelint eslint htmlhint
 " ------------------------------------
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'scss': ['stylelint'],
 \   'css': ['stylelint'],
-\   'html': ['HTMLHint'],
+\   'html': ['htmlhint']
 \}
 
+" quickfixで表示
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+
+" エラー移動
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 
 " ------------------------------------
@@ -297,14 +304,8 @@ vmap gx <Plug>(openbrowser-smart-search)
 " ------------------------------------
 " thinca/vim-localrc 設定例
 " ------------------------------------
-" 1) ローカル: .local.vimrc作成
-" 2) カレントディレクトに移動: lcd <sfile>:h
-" 3) タブの設定
-" setlocal noautoindent tabstop=1 softtabstop=0 shiftwidth=0
-" augroup fileTypeIndent
-"    autocmd!
-"    autocmd BufNewFile,BufRead *.html setlocal noautoindent tabstop=1 softtabstop=0 shiftwidth=0
-" augroup END
+" ローカルに.local.vimrc作成
+" temp.local.vimrcを参照
 
 
 " ------------------------------------
