@@ -1,41 +1,188 @@
-# SCSS-Lint Configurations
+# Sass Lint Configurations
+# Time-stamp: <2017-09-21T18:50:12+09:00>
+#
 # see also:
-# https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
-linters:
-  BangFormat:
-    enabled: true
-    space_before_bang: true
-    space_after_bang: false
-  ColorVariable:
-    enabled: false
-  Comment:
-    enabled: false
-  DebugStatement:
-    enabled: false
-  DeclarationOrder:
-    enabled: true
-  ElsePlacement:
-    enabled: true
-    style: 'same_line'
-  ImportPath:
-    enabled: true
-    leading_underscore: true
-    filename_extension: false
-  MergeableSelector:
-    enabled: true
-    force_nesting: true
-  NameFormat:
-    enabled: false
-  PlaceholderInExtend:
-    enabled: false
-  PropertySpelling:
-    enabled: true
-    # 特殊な新規プロパティ名が登場したら、随時追加
-    extra_properties:
-      - behavior
-  SelectorDepth:
-    enabled: false
-  UnnecessaryParentReference:
-    enabled: true
-  UrlFormat:
-    enabled: false
+# https://github.com/sasstools/sass-lint/
+# https://github.com/sasstools/sass-lint/tree/master/docs/rules
+#
+files:
+  include: '**/*.s+(a|c)ss'
+rules:
+  attribute-quotes:
+    - 2
+    - include: true
+  bem-depth:
+    - 2
+    - max-depth: 1
+  border-zero:
+    - 2
+    - convention: '0'
+  brace-style:
+    - 0
+    - style: 'allman'
+    - allow-single-line: false
+  class-name-format:
+    - 2
+    - convention: 'hyphenatedbem'
+  clean-import-paths:
+    - 2
+    - leading-underscore: true
+    - filename-extension: false
+  declarations-before-nesting:
+    - 2
+  empty-args:
+    - 2
+    - include: true
+  empty-line-between-blocks:
+    - 2
+    - include: true
+    - allow-single-line-rulesets: false
+  extends-before-declarations:
+    - 2
+  extends-before-mixins:
+    - 2
+  final-newline:
+    - 2
+    - include: true
+  force-attribute-nesting:
+    - 0
+  force-element-nesting:
+    - 2
+  force-pseudo-nesting:
+    - 2
+  function-name-format:
+    - 2
+    - allow-leading-underscore: true
+    - convention: 'hyphenatedbem'
+  hex-length:
+    - 2
+    - style: 'long'
+  hex-notation:
+    - 2
+    - style: 'lowercase'
+  id-name-format:
+    - 2
+    - allow-leading-underscore: true
+    - convention: 'hyphenatedlowercase'
+  indentation:
+    - 2
+    - size: 2
+  leading-zero:
+    - 2
+    - include: true
+  max-file-line-count:
+    - 0
+  max-line-length:
+    - 0
+  mixin-name-format:
+    - 2
+    - allow-leading-underscore: true
+    - convention: 'hyphenatedbem'
+  mixins-before-declarations:
+    - 2
+  nesting-depth:
+    - 0
+  no-attribute-selectors:
+    - 2
+  no-color-hex:
+    - 0
+  no-color-keywords:
+    - 2
+  no-color-literals:
+    - 0
+  no-combinators:
+    - 2
+  no-css-comments:
+    - 0
+  no-debug:
+    - 1
+  no-disallowed-properties:
+    - 0
+  no-duplicate-properties:
+    - 0
+  no-empty-rulesets:
+    - 0
+  no-extends:
+    - 0
+  no-ids:
+    - 0
+  no-important:
+    - 0
+  no-invalid-hex:
+    - 2
+  no-mergeable-selectors:
+    - 2
+  no-misspelled-properties:
+    - 2
+  no-qualifying-elements:
+    - 2
+    - allow-element-with-attribute: true
+    - allow-element-with-class: false
+    - allow-element-with-id: false
+  no-trailing-whitespace:
+    - 2
+  no-trailing-zero:
+    - 2
+  no-transition-all:
+    - 0
+  no-universal-selectors:
+    - 0
+  no-url-domains:
+    - 0
+  no-url-protocols:
+    - 0
+  no-vendor-prefixes:
+    - 0
+  no-warn:
+    - 1
+  one-declaration-per-line:
+    - 2
+  placeholder-in-extend:
+    - 0
+  placeholder-name-format:
+    - allow-leading-underscore: true
+    - convention: 'hyphenatedbem'
+  property-sort-order:
+    - 0
+  property-units:
+    - 0
+  pseudo-element:
+    - 2
+  quotes:
+    - 2
+    - style: 'double'
+  shorthand-values:
+    - 0
+  single-line-per-selector:
+    - 2
+  space-after-bang:
+    - 2
+    - include: false
+  space-after-colon:
+    - 2
+    - include: true
+  space-after-comma:
+    - 2
+    - include: true
+  space-around-operator:
+    - 2
+    - include: true
+  space-before-bang:
+    - 2
+    - include: true
+  space-before-colon:
+    - 2
+    - include: false
+  space-between-parens:
+    - 2
+    - include: false
+  trailing-semicolon:
+    - 2
+    - include: true
+  url-quotes:
+    - 2
+  variable-for-property:
+    - 0
+  zero-unit:
+    - 2
+    - include: false
