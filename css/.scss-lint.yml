@@ -1,5 +1,5 @@
 # Sass Lint Configurations
-# Time-stamp: <2017-09-21T18:50:12+09:00>
+# Time-stamp: <2017-10-19T15:58:36+09:00>
 #
 # see also:
 # https://github.com/sasstools/sass-lint/
@@ -83,7 +83,7 @@ rules:
   nesting-depth:
     - 0
   no-attribute-selectors:
-    - 2
+    - 0
   no-color-hex:
     - 0
   no-color-keywords:
@@ -91,7 +91,7 @@ rules:
   no-color-literals:
     - 0
   no-combinators:
-    - 2
+    - 0
   no-css-comments:
     - 0
   no-debug:

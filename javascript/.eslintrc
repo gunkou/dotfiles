@@ -1,5 +1,5 @@
 // ESLint Configurations
-// Time-stamp: <2017-09-21T18:50:10+09:00>
+// Time-stamp: <2017-10-16T17:26:58+09:00>
 {
     // see also:
     // http://eslint.org/docs/configuring/
@@ -59,10 +59,10 @@
         "no-invalid-regexp": 2,
         "no-irregular-whitespace": 2,
         "no-obj-calls": 2,
-        "no-prototype-builtins": 0, // FIXME: 2 にしたいが冗長になるためとりあえず 0
+        "no-prototype-builtins": 0, // TODO: 2 にしたいが、冗長になるため、現状は無効
         "no-regex-spaces": 2,
         "no-sparse-arrays": 2,
-        "no-template-curly-in-string": 0, // FIXME: 2 にしたいが ES2015 外の環境とライブラリで利用される場合を想定し、とりあえず 0
+        "no-template-curly-in-string": 0, // TODO: 2 にしたいが、ES2015 外の環境とライブラリで利用される場合を想定し、現状は無効
         "no-unexpected-multiline": 2,
         "no-unreachable": 2,
         "no-unsafe-finally": 2,
@@ -74,7 +74,9 @@
         // --------------------------------------------------------------------
         // Best Practices
         // --------------------------------------------------------------------
-        "accessor-pairs": [2, {"getWithoutSet": true}],
+        "accessor-pairs": [2, {
+            "getWithoutSet": true
+        }],
         "array-callback-return": 2,
         "block-scoped-var": 2,
         "class-methods-use-this": 1,
@@ -83,7 +85,9 @@
         "curly": [2, "all"],
         "default-case": 2,
         "dot-location": [2, "object"],
-        "dot-notation": [2, {"allowKeywords": false}],
+        "dot-notation": [2, {
+            "allowKeywords": true // ECMAScript 3 互換はなしとする
+        }],
         "eqeqeq": 2,
         "guard-for-in": 2,
         "no-alert": 1,
@@ -106,7 +110,9 @@
         "no-implied-eval": 2,
         "no-invalid-this": 0,
         "no-iterator": 2,
-        "no-labels": [2, {"allowLoop": true}],
+        "no-labels": [2, {
+            "allowLoop": true
+        }],
         "no-lone-blocks": 2,
         "no-loop-func": 2,
         "no-magic-numbers": 0,
@@ -117,13 +123,15 @@
         "no-new": 2,
         "no-octal-escape": 2,
         "no-octal": 2,
-        "no-param-reassign": 0, // FIXME: できれば 2 にしたい
+        "no-param-reassign": 0, // TODO: できれば 2 にしたい
         "no-proto": 2,
         "no-redeclare": 2,
         "no-return-assign": 2,
         "no-return-await": 2,
         "no-script-url": 2,
-        "no-self-assign": [2, {"props": true}],
+        "no-self-assign": [2, {
+            "props": true
+        }],
         "no-self-compare": 2,
         "no-sequences": 2,
         "no-throw-literal": 2,
@@ -137,7 +145,9 @@
         "no-void": 2,
         "no-warning-comments": 0,
         "no-with": 2,
-        "prefer-promise-reject-errors": [2, {"allowEmptyReject": true}],
+        "prefer-promise-reject-errors": [2, {
+            "allowEmptyReject": true
+        }],
         "radix": 2,
         "require-await": 2,
         "vars-on-top": 2,
@@ -162,7 +172,10 @@
         "no-undef-init": 2,
         "no-undef": 2,
         "no-undefined": 0,
-        "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
+        "no-unused-vars": [2, {
+            "vars": "all",
+            "args": "after-used"
+        }],
         "no-use-before-define": 2,
 
         // --------------------------------------------------------------------
@@ -188,11 +201,18 @@
         "array-bracket-spacing": [2, "never"],
         "array-element-newline": 0,
         "block-spacing": [2, "always"],
-        "brace-style": [2, "1tbs", {"allowSingleLine": false}],
-        "camelcase": [2, {"properties": "never"}],
-        "capitalized-comments": [0, "always"], // 煩わしいため無効化
+        "brace-style": [2, "1tbs", {
+            "allowSingleLine": false
+        }],
+        "camelcase": [2, {
+            "properties": "never"
+        }],
+        "capitalized-comments": [0, "always"], // TODO: 煩わしいため、現状は無効
         "comma-dangle": [2, "never"],
-        "comma-spacing": [2, {"before": false, "after": true}],
+        "comma-spacing": [2, {
+            "before": false,
+            "after": true
+        }],
         "comma-style": [2, "last"],
         "computed-property-spacing": [2, "never"],
         "consistent-this": 0,
@@ -210,10 +230,10 @@
             "VariableDeclarator": {
                 "var": 1,
                 "let": 1,
-                "const": 2 // TODO: 1.5（6 文字）にしたいがエラーになる
+                "const": 2 // TODO: 1.5（6 文字）にしたいがエラーになるため、現状は 2（8 文字）
             },
             "outerIIFEBody": 1,
-            // "MemberExpression": 1, // TODO: ON にしたいが 4 スペースだと多すぎる
+            // "MemberExpression": 1, // TODO: ON にしたいが、4 スペースだと多すぎるため、現状は無効
             "FunctionDeclaration": {
                 "parameters": "first",
                 "body": 1
@@ -236,13 +256,17 @@
         "line-comment-position": 0,
         "linebreak-style": 0,
         "lines-around-comment": 0,
+        "lines-between-class-members": [2, "always", {
+            "exceptAfterSingleLine": false
+        }],
         "max-depth": 0,
         "max-len": 0,
         "max-lines": 0,
         "max-nested-callbacks": 0,
         "max-params": 0,
-        "max-statements-per-line": 0,
         "max-statements": 0,
+        "max-statements-per-line": 0,
+        "multiline-comment-style": 0, // TODO: [2, "starred-block"] にしたいが、複数行にわたる行コメントが許されていないため、現状は無効
         "multiline-ternary": 0,
         "new-cap": 2,
         "new-parens": 2,
@@ -255,7 +279,9 @@
         "no-mixed-operators": 2,
         "no-mixed-spaces-and-tabs": 2,
         "no-multi-assign": 2,
-        "no-multiple-empty-lines": [2, {"max": 3}],
+        "no-multiple-empty-lines": [2, {
+            "max": 3
+        }],
         "no-negated-condition": 2,
         "no-nested-ternary": 1,
         "no-new-object": 2,
@@ -274,23 +300,46 @@
         "one-var-declaration-per-line": 0,
         "one-var": 0,
         "operator-assignment": [2, "always"],
-        "operator-linebreak": 0, // TODO: 好みは [2, "before"] だが、強制できない
+        "operator-linebreak": 0, // TODO: [2, "before"] にしたいが、強制できないため、現状は無効
         "padded-blocks": [2, "never"],
         "padding-line-between-statements": [2,
             // return 文前には必ず空行を入れる
-            {"blankLine": "always", "prev": "*", "next": "return"},
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "return"
+            },
             // 各種変数・定数宣言の後には必ず空行を入れる
-            {"blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
-            {"blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]},
+            {
+                "blankLine": "always",
+                "prev": ["const", "let", "var"],
+                "next": "*"
+            },
+            {
+                "blankLine": "any",
+                "prev": ["const", "let", "var"],
+                "next": ["const", "let", "var"]
+            },
             // 各種 directive の後には必ず空行を入れる
-            {"blankLine": "always", "prev": "directive", "next": "*"},
-            {"blankLine": "any", "prev": "directive", "next": "directive"}
+            {
+                "blankLine": "always",
+                "prev": "directive",
+                "next": "*"
+            },
+            {
+                "blankLine": "any",
+                "prev": "directive",
+                "next": "directive"
+            }
         ],
         "quote-props": [2, "as-needed"],
         "quotes": [2, "single", "avoid-escape"],
         "require-jsdoc": 0,
         "semi": [2, "always"],
-        "semi-spacing": [2, {"before": false, "after": true}],
+        "semi-spacing": [2, {
+            "before": false,
+            "after": true
+        }],
         "semi-style": [2, "last"],
         "sort-keys": 0,
         "sort-vars": 0,
@@ -301,15 +350,23 @@
             "asyncArrow": "always"
         }],
         "space-in-parens": [2, "never"],
-        "space-infix-ops": [2, {"int32Hint": true}],
-        "space-unary-ops": [2, {"words": true, "nonwords": false}],
+        "space-infix-ops": [2, {
+            "int32Hint": true
+        }],
+        "space-unary-ops": [2, {
+            "words": true,
+            "nonwords": false
+        }],
         "spaced-comment": [2, "always", {
             "block": {
                 "markers": ["*", "!", "*!"],
                 "balanced": true
             }
         }],
-        "switch-colon-spacing": [2, {"after": false, "before": false}],
+        "switch-colon-spacing": [2, {
+            "after": false,
+            "before": false
+        }],
         "template-tag-spacing": [2, "never"],
         "unicode-bom": [1, "never"],
         "wrap-regex": 0,
@@ -348,20 +405,23 @@
         "no-useless-computed-key": 2,
         "no-useless-constructor": 2,
         "no-useless-rename": 2,
-        "no-var": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
+        "no-var": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
         "object-shorthand": [2, "never"],
-        "prefer-arrow-callback": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
-        "prefer-const": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
-        "prefer-destructuring": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
-        "prefer-numeric-literals": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
-        "prefer-rest-params": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
-        "prefer-spread": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
-        "prefer-template": 0, // TODO: 完全に ES6 へ移行しない限り、無効のまま
+        "prefer-arrow-callback": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
+        "prefer-const": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
+        "prefer-destructuring": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
+        "prefer-numeric-literals": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
+        "prefer-rest-params": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
+        "prefer-spread": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
+        "prefer-template": 0, // TODO: 完全に ES6 へ移行しない限り、現状は無効
         "require-yield": 2,
         "rest-spread-spacing": [2, "never"],
         "sort-imports": 0,
         "symbol-description": 2,
         "template-curly-spacing": [2, "never"],
-        "yield-star-spacing": [2, {"before": false, "after": true}]
+        "yield-star-spacing": [2, {
+            "before": false,
+            "after": true
+        }]
     }
 }
