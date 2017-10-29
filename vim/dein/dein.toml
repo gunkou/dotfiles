@@ -51,7 +51,7 @@ repo = 'LeafCage/yankround.vim'
 repo = 'w0rp/ale'
 
 [[plugins]] # URLオープン
-repo = 'open-browser.vim'
+repo = 'tyru/open-browser.vim'
 lazy = 1
 on_map = ['<Plug>(openbrowser-smart-search)']
 
@@ -112,5 +112,13 @@ on_cmd = ['CSScomb']
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
+
+[[plugins]]
+repo  = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
 
 #
