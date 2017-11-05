@@ -1,5 +1,5 @@
 // ESLint Configurations
-// Time-stamp: <2017-10-16T17:26:58+09:00>
+// Time-stamp: <2017-10-30T11:17:12+09:00>
 {
     // see also:
     // http://eslint.org/docs/configuring/
@@ -289,7 +289,10 @@
         "no-restricted-syntax": [2, "WithStatement"],
         "no-tabs": 1,
         "no-ternary": 0,
-        "no-trailing-spaces": 2,
+        "no-trailing-spaces": [2, {
+            "skipBlankLines": false,
+            "ignoreComments": false
+        }],
         "no-underscore-dangle": 0,
         "no-unneeded-ternary": 2,
         "no-whitespace-before-property": 2,
