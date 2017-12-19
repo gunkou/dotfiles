@@ -117,8 +117,8 @@ repo = 'pangloss/vim-javascript'
 repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
 
-[[plugins]]
-repo  = 'Quramy/tsuquyomi'
-on_ft = ['typescript']
+# [[plugins]] # npm install -g typescript-toolsが必要
+# repo  = 'Quramy/tsuquyomi'
+# on_ft = ['typescript']
 
 #
