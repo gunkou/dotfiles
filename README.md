@@ -1,32 +1,49 @@
 # vim
 ## 環境構築手順
-### windows
-
 - vim
     - [vim-kaoriya](https://github.com/koron/vim-kaoriya/releases)
 
 - プラグイン管理
     - [Dein.vim](https://github.com/Shougo/dein.vim)
         - ディレクトリ作成
-        - クローン
-
 ```
-.vim\dein\repos\github.com\Shougo\dein.vim
+mkdir ~/.vim/dein
+```
+        - インストール
+```
+$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+$ sh ./installer.sh ~/.vim/dein
+```
 
-git clone https://github.com/Shougo/dein.vim
+        - プラグインのインストール
+```
+:call dein#install()
 ```
 
 - ctagsインストール
-    - [Win32版(バイナリのみ)](http://hp.vector.co.jp/authors/VA025040/ctags/) をダウンロードして、Vimのディレクトリに追加
+    - Windows
+        - [Win32版(バイナリのみ)](http://hp.vector.co.jp/authors/VA025040/ctags/) をダウンロードして、Vimのディレクトリに追加
 
 - フォント
-    - [Myrica](https://github.com/tomokuni/Myrica)
+    - Windows
+        - [Myrica](https://github.com/tomokuni/Myrica)
 
 - シンボリックリンク
-
+    - Windows
 ```
 mklink %HOMEPATH%"\.gvimrc" %HOMEPATH%"\dotfiles\.gvimrc"
 mklink %HOMEPATH%"\.vimrc" %HOMEPATH%"\dotfiles\.vimrc"
+```
+    - Linux
+```
+$ ln -sf ~/dotfiles/.vimrc ~/.vimrc
+$ ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
+```
+
+- そのほか
+    - undo用ファルダ
+```
+mkdir ~/.vim/undo
 ```
 
 # そのほかの設定ファイル
