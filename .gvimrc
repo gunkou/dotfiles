@@ -2,15 +2,29 @@ source $VIMRUNTIME/delmenu.vim
 set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 
-" font
-set guifont=MyricaM_M:h12:cSHIFTJIS
+" if has('gui_macvim')
+" endif
 
-" 半透明
-autocmd FocusGained * set transparency=220
-autocmd FocusLost * set transparency=128
+" if has('unix')
+" endif
 
-" ウィンドウいっぱいに開く
-au GUIEnter * simalt ~x
+" if has('mac')
+" endif
+
+" if has('unix') || has('mac')
+" endif
+
+if has('win32') || has ('win64')
+  " font
+  set guifont=MyricaM_M:h12:cSHIFTJIS
+
+  " 半透明
+  autocmd FocusGained * set transparency=220
+  autocmd FocusLost * set transparency=128
+
+  " ウィンドウいっぱいに開く
+  au GUIEnter * simalt ~x
+endif
 
 " ツールバーを非表示
 set guioptions-=T
