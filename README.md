@@ -1,5 +1,7 @@
+# Windows
+- [chocolatey](https://chocolatey.org/)
+
 # vim
-## 環境構築手順
 - vim
     - [vim-kaoriya](https://github.com/koron/vim-kaoriya/releases)
 
@@ -46,4 +48,3 @@ $ ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
 mkdir ~/.vim/undo
 ```
 
-# そのほかの設定ファイル
