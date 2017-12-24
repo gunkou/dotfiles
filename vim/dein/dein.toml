@@ -85,6 +85,8 @@ repo = 'thinca/vim-singleton'
 [[plugins]] # editorconfig
 repo = 'sgur/vim-editorconfig'
 
+[[plugins]] # git
+repo = 'tpope/vim-fugitive'
 
 # ------------------------------------
 # HTML,CSS,JavaScript
