@@ -55,8 +55,6 @@ repo = 'tyru/open-browser.vim'
 lazy = 1
 on_map = ['<Plug>(openbrowser-smart-search)']
 
-[[plugins]] # テキスト整形
-repo = 'junegunn/vim-easy-align'
 
 [[plugins]] # コメントON/OFF
 repo = 'tomtom/tcomment_vim'
