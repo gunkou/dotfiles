@@ -11,12 +11,11 @@ if dein#load_state(expand('~/.vim/dein'))
 
   let g:rc_dir = expand('~/dotfiles/vim/dein')
   let s:toml = g:rc_dir . '/dein.toml'
-  " let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
   " TOMLファイルにpluginを記述
-  " call dein#load_toml(s:toml, {'lazy': 0})
-  " call dein#load_toml(s:lazy_toml, {'lazy': 1})
-  call dein#load_toml(s:toml)
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   call dein#end()
   call dein#save_state()

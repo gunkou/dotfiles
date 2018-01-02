@@ -1,8 +1,5 @@
-[[plugins]]
+[[plugins]] # プラグイン管理
 repo = 'Shougo/dein.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
@@ -20,17 +17,8 @@ repo = 'Shougo/neomru.vim'
 [[plugins]] # アウトライン
 repo = 'Shougo/unite-outline'
 
-[[plugins]]
+[[plugins]] # ファイルタイプの判定
 repo = 'Shougo/context_filetype.vim'
-
-[[plugins]] # 補完
-repo = 'Shougo/neocomplete.vim'
-lazy = 1
-on_i = 1
-
-[[plugins]]
-repo = 'osyo-manga/vim-precious'
-depends = ['context_filetype.vim']
 
 [[plugins]] # ファイルをtree表示
 repo = 'scrooloose/nerdtree'
@@ -50,20 +38,8 @@ repo = 'LeafCage/yankround.vim'
 [[plugins]] # シンタックスチェック
 repo = 'w0rp/ale'
 
-[[plugins]] # URLオープン
-repo = 'tyru/open-browser.vim'
-lazy = 1
-on_map = ['<Plug>(openbrowser-smart-search)']
-
-
 [[plugins]] # コメントON/OFF
 repo = 'tomtom/tcomment_vim'
-
-[[plugins]] # マークダウンプレビュー
-repo = 'kannokanno/previm'
-lazy = 1
-on_ft = ['md']
-on_cmd = ['PrevimOpen']
 
 [[plugins]] # カラースキーム
 repo = 'jacoborus/tender'
@@ -89,36 +65,23 @@ repo = 'tpope/vim-fugitive'
 # ------------------------------------
 # HTML,CSS,JavaScript
 # ------------------------------------
+[[plugins]] # Syntax Highlight
+repo = 'othree/html5.vim'
+
+[[plugins]] # Syntax Highlight
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]] # Syntax Highlight
+repo = 'pangloss/vim-javascript'
+
+[[plugins]] # Syntax Highlight
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]] # emmet
+repo = 'mattn/emmet-vim'
+
 [[plugins]] # 整形
 repo = 'maksimr/vim-jsbeautify'
 
-[[plugins]]
-repo = 'othree/html5.vim'
-
-[[plugins]]
-repo = 'mattn/emmet-vim'
-
-[[plugins]]
-repo = 'hail2u/vim-css3-syntax'
-
-[[plugins]]
-repo = 'kewah/vim-stylefmt'
-
-[[plugins]]
-repo = 'csscomb/vim-csscomb'
-lazy = 1
-on_ft = ['css,scss']
-on_cmd = ['CSScomb']
-
-[[plugins]]
-repo = 'pangloss/vim-javascript'
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-on_ft = ['typescript']
-
-# [[plugins]] # npm install -g typescript-toolsが必要
+# [[plugins]] # npm install typescript-tools -g
 # repo  = 'Quramy/tsuquyomi'
-# on_ft = ['typescript']
-
-#

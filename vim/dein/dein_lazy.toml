@@ -1,0 +1,100 @@
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+hook_source = '''
+  " Plugin key-mappings.
+  " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>     <Plug>(neosnippet_expand_target)
+  " SuperTab like snippets behavior.
+  " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  "imap <expr><TAB>
+  " \ pumvisible() ? "\<C-n>" :
+  " \ neosnippet#expandable_or_jumpable() ?
+  " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  " For conceal markers.
+  " if has('conceal')
+  "  set conceallevel=2 concealcursor=niv
+  " endif
+'''
+
+[[plugins]] # 補完
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+
+[[plugins]] # filetype を自動的に切り換える
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+on_i = 1
+hook_add = '''
+  let g:context_filetype#filetypes = {
+    \ 'html': [
+    \   {
+    \    'start':
+    \     '<script\%( [^>]*\)\?\%( [^>]*\)\?>',
+    \    'end': '</script>', 'filetype': 'javascript',
+    \   },
+    \   {
+    \    'start': '<style\%( [^>]*\)\?\%( [^>]*\)\?>',
+    \    'end': '</style>', 'filetype': 'css',
+    \   },
+    \   {
+    \    'start': '<?php\?',
+    \    'end': '?>', 'filetype': 'php',
+    \   }
+    \ ],}
+  " }}}
+
+  " insert mode に入った時に 'filetype' を切り換える。
+  " カーソル移動時の自動切り替えを無効化
+  let g:precious_enable_switch_CursorMoved = {
+   \ "*" : 0
+   \}
+  let g:precious_enable_switch_CursorMoved_i = {
+   \ "*" : 0
+   \}
+
+  " insert に入った時にスイッチし、抜けた時に元に戻す
+  augroup test
+    autocmd!
+    autocmd InsertEnter * :PreciousSwitch
+    autocmd InsertLeave * :PreciousReset
+  augroup END
+'''
+
+[[plugins]] # URLオープン
+repo = 'tyru/open-browser.vim'
+on_map = ['<Plug>(openbrowser-smart-search)']
+hook_add = '''
+  let g:netrw_nogx = 1 " disable netrw's gx mapping.
+  nmap gx <Plug>(openbrowser-smart-search)
+  vmap gx <Plug>(openbrowser-smart-search)
+'''
+
+[[plugins]] # マークダウンプレビュー
+repo = 'kannokanno/previm'
+on_cmd = 'PrevimOpen'
+depends = 'open-browser.vim'
+hook_add = '''
+  augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+      if has('win32') || has ('win64')
+        let g:previm_open_cmd = 'C:\\Program\ Files\ (x86)\\Google\\Chrome\\Application\\chrome.exe'
+      endif
+  augroup END
+'''
+
+[[plugins]] # npm install stylefmt -g
+repo = 'kewah/vim-stylefmt'
+on_ft = ['css','scss']
+
+[[plugins]] # npm install csscomb -g
+repo = 'csscomb/vim-csscomb'
+on_ft = ['css','scss']

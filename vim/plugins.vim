@@ -162,8 +162,10 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+" ------------------------------------
 " html要素の閉じタグコメントアウト
 " kosei27/endtagcomment.vim'
+" ------------------------------------
 " こういうHTMLがあったときに
 " <div id="hoge" class="fuga">
 " ...
@@ -284,69 +286,11 @@ nnoremap <silent> ,t.  :<C-u>call Endtagcomment_firstclass_symbol_toggle()<CR>
 
 
 " ------------------------------------
-" マークダウン
-" ------------------------------------
-augroup PrevimSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-    let g:previm_open_cmd = 'C:\\Program\ Files\ (x86)\\Google\\Chrome\\Application\\chrome.exe'
-augroup END
-
-
-" ------------------------------------
-" open-browser.vim
-" ------------------------------------
-let g:netrw_nogx = 1 " disable netrw's gx mapping.
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
-
-
-" ------------------------------------
 " thinca/vim-localrc 設定例
 " ------------------------------------
 " ローカルに.local.vimrc作成
 " temp.local.vimrcを参照
 
-
-" ------------------------------------
-
-
-" ------------------------------------
-" vim-precious
-" ------------------------------------
-let g:context_filetype#filetypes = {
-    \ 'html': [
-    \   {
-    \    'start':
-    \     '<script\%( [^>]*\)\?\%( [^>]*\)\?>',
-    \    'end': '</script>', 'filetype': 'javascript',
-    \   },
-    \   {
-    \    'start': '<style\%( [^>]*\)\?\%( [^>]*\)\?>',
-    \    'end': '</style>', 'filetype': 'css',
-    \   },
-    \   {
-    \    'start': '<?php\?',
-    \    'end': '?>', 'filetype': 'php',
-    \   }
-    \ ],}
-" }}}
-
-" insert mode に入った時に 'filetype' を切り換える。
-" カーソル移動時の自動切り替えを無効化
-let g:precious_enable_switch_CursorMoved = {
- \ "*" : 0
- \}
-let g:precious_enable_switch_CursorMoved_i = {
- \ "*" : 0
- \}
-
-" insert に入った時にスイッチし、抜けた時に元に戻す
-augroup test
-  autocmd!
-  autocmd InsertEnter * :PreciousSwitch
-  autocmd InsertLeave * :PreciousReset
-augroup END
 
 " ------------------------------------
 " vim-quickhl
@@ -356,10 +300,12 @@ xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
 
+
 " ------------------------------------
 " vim-singleton
 " ------------------------------------
 call singleton#enable()
+
 
 " ------------------------------------
 " vim-jsbeautify
@@ -370,32 +316,16 @@ autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 
 " ------------------------------------
-" neosnippet
+" easymotion
 " ------------------------------------
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+map <Leader> <Plug>(easymotion-prefix)
 
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" For conceal markers.
-" if has('conceal')
-"  set conceallevel=2 concealcursor=niv
-" endif
+" ------------------------------------
+" incsearch
+" ------------------------------------
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
