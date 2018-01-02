@@ -50,6 +50,9 @@ repo = 't9md/vim-quickhl'
 [[plugins]] # ビジュアルモードで選択した文字列を検索
 repo = 'thinca/vim-visualstar'
 
+[[plugins]] # 検索
+repo = 'haya14busa/incsearch.vim'
+
 [[plugins]] # プロジェクト固有の設定を読み込む
 repo = 'thinca/vim-localrc'
 
@@ -61,6 +64,9 @@ repo = 'sgur/vim-editorconfig'
 
 [[plugins]] # git
 repo = 'tpope/vim-fugitive'
+
+[[plugins]] # カーソル移動
+repo = 'easymotion/vim-easymotion'
 
 # ------------------------------------
 # HTML,CSS,JavaScript
