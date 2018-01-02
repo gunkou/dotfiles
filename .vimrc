@@ -223,9 +223,7 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " -----------------------------------------------------------------------------
 " 検索
-" http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
 " -----------------------------------------------------------------------------
-
 " insert modeで開始
 let g:unite_enable_start_insert = 1
 
@@ -241,13 +239,6 @@ nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W
 
 " grep検索結果の再呼出
 nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
-
-" unite grep に The Platinum Searcher を使う
-if executable('pt')
-  let g:unite_source_grep_command = 'pt'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
-  let g:unite_source_grep_recursive_opt = ''
-endif
 
 
 " -----------------------------------------------------------------------------
