@@ -1,0 +1,17 @@
+tap "caskroom/cask"
+tap "caskroom/versions"
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "ctags", link: false
+brew "curl"
+brew "fish"
+brew "git"
+brew "git-flow"
+brew "mas"
+brew "nodebrew"
+brew "wget"
+cask "dropbox"
+cask "iterm2"
+cask "virtualbox"
+mas "Alfred", id: 405843582
+mas "Pocket", id: 568494494
