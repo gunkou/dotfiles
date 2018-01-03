@@ -4,27 +4,29 @@
 " tabstopとshiftwidthは同じ値に設定し、expandtabも有効にする
 " noexpandtabの設定をしていたときに作られたファイルのタブはタブのままで半角スペースに置き換わっていないことがある
 " 幅が細くならない時、expandtabになっているかをチェックし、ファイルのタブを削除し、タブを追加
-" vim立ち上げたときに、自動的にvim-indent-guidesをオンにする
-let g:indent_guides_enable_on_vim_startup=1
 
-" ガイドをスタートするインデントの量
-let g:indent_guides_start_level=2
+if has("gui_running")
+    " vim立ち上げたときに、自動的にvim-indent-guidesをオンにする
+    let g:indent_guides_enable_on_vim_startup=1
 
-" 自動カラーを無効にする
-let g:indent_guides_auto_colors=0
+    " ガイドをスタートするインデントの量
+    let g:indent_guides_start_level=2
 
-" 奇数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
+    " 自動カラーを無効にする
+    let g:indent_guides_auto_colors=0
 
-" 偶数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
+    " 奇数インデントのカラー
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
 
-" ハイライト色の変化の幅
-let g:indent_guides_color_change_percent=30
+    " 偶数インデントのカラー
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 
-" ガイドの幅
-let g:indent_guides_guide_size=1
+    " ハイライト色の変化の幅
+    let g:indent_guides_color_change_percent=30
 
+    " ガイドの幅
+    let g:indent_guides_guide_size=1
+endif
 
 " ------------------------------------
 " emmet
@@ -299,12 +301,6 @@ nmap <Space>m <Plug>(quickhl-manual-this)
 xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
-
-
-" ------------------------------------
-" vim-singleton
-" ------------------------------------
-call singleton#enable()
 
 
 " ------------------------------------

@@ -32,7 +32,11 @@ set guioptions-=T
 "メニューを非表示
 set guioptions-=m
 
-
+" ------------------------------------
+" vim-singleton
+" ------------------------------------
+call singleton#enable()
+"
 " ------------------------------------
 " term gui colors
 " ------------------------------------
@@ -63,3 +67,5 @@ set nocursorline
 
 " 行番号の相対表示を明示的にOFF
 set norelativenumber
+
+
