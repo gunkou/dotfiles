@@ -41,6 +41,8 @@
 - フォントをインストール
     - Windows
         - [Myrica](https://github.com/tomokuni/Myrica)
+    - mac
+        - [Ricty Diminished](http://www.rs.tus.ac.jp/yyusa/ricty_diminished.html)
 - シンボリックリンクの作成
     - Windows
     ```
