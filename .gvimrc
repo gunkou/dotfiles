@@ -2,8 +2,14 @@ source $VIMRUNTIME/delmenu.vim
 set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 
-" if has('gui_macvim')
-" endif
+if has('gui_macvim')
+  " font
+  set guifont=Ricty\ Diminished\ Regular:h12
+  " 縦幅 デフォルトは24
+  set lines=999
+  " 横幅 デフォルトは80
+  set columns=999
+endif
 
 " if has('unix')
 " endif
@@ -35,14 +41,14 @@ set guioptions-=m
 " ------------------------------------
 " vim-singleton
 " ------------------------------------
-call singleton#enable()
-"
+" call singleton#enable()
+
 " ------------------------------------
 " term gui colors
 " ------------------------------------
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
- set termguicolors
+  set termguicolors
 endif
 
 " For Neovim 0.1.3 and 0.1.4
