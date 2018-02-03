@@ -310,6 +310,8 @@ inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap ( ()<ESC>i
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
+" vimproc に Windows の DLL ダウンロード機能を有効にする
+let g:vimproc#download_windows_dll = 1
 
 " -----------------------------------------------------------------------------
 " プラグインなど
