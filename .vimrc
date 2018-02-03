@@ -115,6 +115,7 @@ if &encoding !=# 'utf-8'
   set encoding=japan
   set fileencoding=japan
 endif
+
 if has('iconv')
   let s:enc_euc = 'euc-jp'
   let s:enc_jis = 'iso-2022-jp'
@@ -151,6 +152,7 @@ if has('iconv')
   unlet s:enc_euc
   unlet s:enc_jis
 endif
+
 " 日本語を含まない場合は fileencoding に encoding を使うようにする
 if has('autocmd')
   function! AU_ReCheck_FENC()
@@ -160,8 +162,7 @@ if has('autocmd')
   endfunction
   autocmd BufReadPost * call AU_ReCheck_FENC()
 endif
-" 改行コードの自動認識
-set fileformats=unix,dos,mac
+
 " □とか○の文字があってもカーソル位置がずれないようにする
 if exists('&ambiwidth')
   set ambiwidth=double
