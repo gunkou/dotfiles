@@ -72,6 +72,9 @@ repo = 'tpope/vim-fugitive'
 [[plugins]] # カーソル移動
 repo = 'easymotion/vim-easymotion'
 
+[[plugins]] # ステータスライン
+repo = 'itchyny/lightline.vim'
+
 # ------------------------------------
 # HTML,CSS,JavaScript
 # ------------------------------------
