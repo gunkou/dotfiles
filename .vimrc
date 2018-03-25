@@ -103,6 +103,9 @@ set autoread
 " gvimでファイル保存ダイアログの初期ディレクトリ設定
 set browsedir=buffer
 
+" コマンドモードに戻るときにIMEをオフにする
+set imdisable
+
 " ------------------------------------
 " 文字コード、改行コード
 " ------------------------------------
@@ -235,6 +238,8 @@ nnoremap - <C-x>
 " 検索結果ハイライトをESCキーの連打でリセット
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
+" ESCでIMEを確実にOFF
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 
 " -----------------------------------------------------------------------------
 " 検索
