@@ -76,19 +76,32 @@ repo = 'easymotion/vim-easymotion'
 repo = 'itchyny/lightline.vim'
 
 # ------------------------------------
-# HTML,CSS,JavaScript
+# Syntax Highlight
 # ------------------------------------
-[[plugins]] # Syntax Highlight
+[[plugins]]
 repo = 'othree/html5.vim'
 
-[[plugins]] # Syntax Highlight
+[[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 
-[[plugins]] # Syntax Highlight
+[[plugins]]
 repo = 'pangloss/vim-javascript'
 
-[[plugins]] # Syntax Highlight
+[[plugins]]
 repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'evidens/vim-twig'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+# ------------------------------------
+# HTML,CSS,JavaScript
+# ------------------------------------
 
 [[plugins]] # emmet
 repo = 'mattn/emmet-vim'
