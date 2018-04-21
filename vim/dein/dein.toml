@@ -18,9 +18,6 @@ repo = 'Shougo/unite.vim'
 [[plugins]] # Unite.vimで最近使ったファイルを表示
 repo = 'Shougo/neomru.vim'
 
-[[plugins]] # アウトライン
-repo = 'Shougo/unite-outline'
-
 [[plugins]] # ファイルタイプの判定
 repo = 'Shougo/context_filetype.vim'
 
