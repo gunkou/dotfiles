@@ -63,8 +63,11 @@ repo = 'thinca/vim-singleton'
 [[plugins]] # editorconfig
 repo = 'sgur/vim-editorconfig'
 
-[[plugins]] # git
+[[plugins]] # git操作
 repo = 'tpope/vim-fugitive'
+
+[[plugins]] # gitの差分を表示する
+repo = 'airblade/vim-gitgutter'
 
 [[plugins]] # カーソル移動
 repo = 'easymotion/vim-easymotion'
