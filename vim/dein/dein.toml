@@ -75,6 +75,9 @@ repo = 'easymotion/vim-easymotion'
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim'
 
+[[plugins]] # 文章書くときにいい感じの余白を画面につけてくれる
+repo = 'junegunn/goyo.vim'
+
 # ------------------------------------
 # Syntax Highlight
 # ------------------------------------
@@ -102,7 +105,6 @@ repo = 'cespare/vim-toml'
 # ------------------------------------
 # HTML,CSS,JavaScript
 # ------------------------------------
-
 [[plugins]] # emmet
 repo = 'mattn/emmet-vim'
 
