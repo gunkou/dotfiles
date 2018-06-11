@@ -1,17 +1,28 @@
-tap "caskroom/cask"
-tap "caskroom/versions"
-tap "homebrew/bundle"
 tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/versions"
+tap "caskroom/cask"
+brew "ansible"
 brew "ctags", link: false
 brew "curl"
-brew "fish"
+brew "docker"
 brew "git"
 brew "git-flow"
 brew "mas"
 brew "nodebrew"
+brew "pandoc"
+brew "rbenv"
 brew "wget"
-cask "dropbox"
+cask "android-studio"
+cask "docker"
+cask "filezilla"
+cask "imagealpha"
 cask "iterm2"
+cask "thunderbird"
+cask "vagrant"
 cask "virtualbox"
-mas "Alfred", id: 405843582
+mas "ForkLift", id: 412448059
 mas "Pocket", id: 568494494
+mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353
+mas "Xcode", id: 497799835
