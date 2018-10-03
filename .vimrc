@@ -104,7 +104,7 @@ set autoread
 set browsedir=buffer
 
 " コマンドモードに戻るときにIMEをオフにする
-set imdisable
+" set imdisable
 
 " ------------------------------------
 " 文字コード、改行コード
