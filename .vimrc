@@ -103,6 +103,9 @@ set autoread
 " gvimでファイル保存ダイアログの初期ディレクトリ設定
 set browsedir=buffer
 
+" コマンドモードに戻るときにIMEをオフにする
+" set imdisable
+
 " 端末でマウスを有効にする
 set mouse=a
 
