@@ -113,3 +113,7 @@ repo = 'maksimr/vim-jsbeautify'
 
 # [[plugins]] # npm install typescript-tools -g
 # repo  = 'Quramy/tsuquyomi'
+
+[[plugins]]
+repo = 'marijnh/tern_for_vim'
+build = 'npm install'
