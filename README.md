@@ -5,6 +5,10 @@
     choco install package.config
     ```
 
+Gitをインストールするときに環境変数PATHに`C:\Program Files\Git\cmd`が追加されているか確認すること
+
+これが追加されていないと、deinを使用してvimのプラグインをインストールできない
+
 
 # Mac
 - [Homebrew](https://brew.sh/index_ja.html)をインストール
