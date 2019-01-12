@@ -2,7 +2,7 @@
 - [chocolatey](https://chocolatey.org/)をインストール
     - `./windows/`に移動して下記実行
     ```
-    choco install package.config
+    choco install chocolatey.config 
     ```
 
 Gitをインストールするときに環境変数PATHに`C:\Program Files\Git\cmd`が追加されているか確認すること
@@ -18,6 +18,9 @@ Gitをインストールするときに環境変数PATHに`C:\Program Files\Git\
     $ brew bundle
     ```
 
+# Git
+
+- [使い始める - 最初のGitの構成](https://git-scm.com/book/ja/v2/使い始める-最初のGitの構成)
 
 # vim
 [vim-kaoriya](https://github.com/koron/vim-kaoriya/releases)をインストール
