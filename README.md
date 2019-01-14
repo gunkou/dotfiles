@@ -62,6 +62,37 @@ Gitをインストールするときに環境変数PATHに`C:\Program Files\Git\
     $ ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
     ```
 
+# Neovim(Windows)
+
+chocolateyを使用して以下をインストールする
+
+```
+choco install neovim
+choco install ruby
+choco install python3 --params "/InstallDir:C:\tools\python3"
+choco install python2 --params "/InstallDir:C:\tools\python2"
+```
+
+[Microsoft Visual C++ Build Tools](https://www.microsoft.com/ja-JP/download/confirmation.aspx?id=48159) のインストール
+
+
+環境変数の設定
+
+```
+$XDG_CONFIG_HOME: $HOME/.config
+```
+
+設定ファイルを格納するディレクトリを作成
+
+```
+mkdir $XDG_CONFIG_HOME/nvim
+```
+
+シンボリックリンクの作成
+
+```
+mklink %HOMEPATH%"\.config/nvim/init.vim" %HOMEPATH%\dotfiles\.vimrc
+```
 
 # そのほか
 - vimのundo用ファルダの作成
@@ -72,3 +103,4 @@ mkdir ~/.vim/undo
 ```
 nodebrew setup
 ```
+

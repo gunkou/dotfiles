@@ -1,38 +1,38 @@
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
-
-if dein#load_state(expand('~/.vim/dein'))
-  call dein#begin(expand('~/.vim/dein'))
-
-  let g:rc_dir = expand('~/dotfiles/vim/dein')
-  let s:toml = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
-
-  " TOMLファイルにpluginを記述
-  call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
-filetype plugin indent on
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
-"End dein Scripts-------------------------
-
-" ’%‘で対応タグに移動するプラグインを有効化
-source $VIMRUNTIME/macros/matchit.vim
+﻿"dein Scripts-----------------------------
+" if &compatible
+"   set nocompatible               " Be iMproved
+" endif
+" 
+" " Required:
+" set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+" 
+" if dein#load_state(expand('~/.vim/dein'))
+"   call dein#begin(expand('~/.vim/dein'))
+" 
+"   let g:rc_dir = expand('~/dotfiles/vim/dein')
+"   let s:toml = g:rc_dir . '/dein.toml'
+"   let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+" 
+"   " TOMLファイルにpluginを記述
+"   call dein#load_toml(s:toml, {'lazy': 0})
+"   call dein#load_toml(s:lazy_toml, {'lazy': 1})
+" 
+"   call dein#end()
+"   call dein#save_state()
+" endif
+" 
+" " Required:
+" filetype plugin indent on
+" 
+" " If you want to install not installed plugins on startup.
+" if dein#check_install()
+"   call dein#install()
+" endif
+" 
+" "End dein Scripts-------------------------
+" 
+" " ’%‘で対応タグに移動するプラグインを有効化
+" source $VIMRUNTIME/macros/matchit.vim
 
 
 " =============================================================================
@@ -44,8 +44,19 @@ syntax on
 " -----------------------------------------------------------------------------
 " set
 " -----------------------------------------------------------------------------
+" pythonのインストールしてある箇所指定
+if has('win32') || has ('win64')
+    let g:python3_host_prog='C:/tools/python3/python.exe'
+    let g:python_host_prog='C:/tools/python2/python.exe'
+endif
+
+
 " yank したテキストをクリップボードに格納する
-set clipboard=unnamed,autoselect
+if has('nvim')
+    set clipboard=unnamedplus
+else
+    set clipboard=unnamed,autoselect
+endif
 
 " Directories for swp files
 " 「ファイル名 . 拡張子~」といった末尾にチルダを付けたファイルを
@@ -56,10 +67,10 @@ set noundofile
 
 " Undoの永続化、undoフォルダ作成すること
 " 肥大化するこで定期的に削除
-if has('persistent_undo')
-  set undodir=~/.vim/undo
-  set undofile
-endif
+" if has('persistent_undo')
+"   set undodir=~/.vim/undo
+"   set undofile
+" endif
 
 " ファイル保存時の場所を、開いているファイルが有る場所に設定
 set browsedir=buffer
@@ -285,9 +296,9 @@ let g:vimproc#download_windows_dll = 1
 " -----------------------------------------------------------------------------
 " プラグインなど
 " -----------------------------------------------------------------------------
-if filereadable(expand('~/dotfiles/vim/plugins.vim'))
-    source ~/dotfiles/vim/plugins.vim
-endif
+" if filereadable(expand('~/dotfiles/vim/plugins.vim'))
+"     source ~/dotfiles/vim/plugins.vim
+" endif
 
 
 " =============================================================================
