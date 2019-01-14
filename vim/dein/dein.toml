@@ -8,9 +8,9 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'Shougo/vimshell'
 rev  = '3787e5'
 
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
+# [[plugins]]
+# repo = 'Shougo/vimproc.vim'
+# build = 'make'
 
 [[plugins]] # ファイルオープン
 repo = 'Shougo/unite.vim'
