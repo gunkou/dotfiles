@@ -88,10 +88,11 @@ $XDG_CONFIG_HOME: $HOME/.config
 mkdir $XDG_CONFIG_HOME/nvim
 ```
 
-シンボリックリンクの作成
+管理者権限でコマンドプロンプトを立ち上げてシンボリックリンクの作成
 
 ```
-mklink %HOMEPATH%"\.config/nvim/init.vim" %HOMEPATH%\dotfiles\.vimrc
+mklink %HOMEPATH%"\.config/nvim/init.vim" %HOMEPATH%\dotfiles\.vimrc"
+mklink %HOMEPATH%"\.config\nvim\ginit.vim" %HOMEPATH%"\dotfiles\.gvimrc"
 ```
 
 # そのほか
