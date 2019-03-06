@@ -99,7 +99,7 @@ mklink %HOMEPATH%"\.config\nvim\ginit.vim" %HOMEPATH%"\dotfiles\.gvimrc"
 - vimのundo用ファルダの作成
 ```
 mkdir ~/.vim/undo
-```
+``
 - nodebrewの設定
 ```
 nodebrew setup
