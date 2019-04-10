@@ -22,11 +22,11 @@ endif
 
 if has('win32') || has ('win64')
   " font
-  set guifont=MyricaM_M:h12:cSHIFTJIS
+  " set guifont=MyricaM_M:h12:cSHIFTJIS
 
   " 半透明
-  autocmd FocusGained * set transparency=220
-  autocmd FocusLost * set transparency=128
+  " autocmd FocusGained * set transparency=220
+  " autocmd FocusLost * set transparency=128
 
   " ウィンドウいっぱいに開く
   au GUIEnter * simalt ~x
