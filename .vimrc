@@ -45,7 +45,7 @@ syntax on
 " set
 " -----------------------------------------------------------------------------
 " yank したテキストをクリップボードに格納する
-set clipboard=unnamed,autoselect
+set clipboard=unnamed
 
 " Directories for swp files
 " 「ファイル名 . 拡張子~」といった末尾にチルダを付けたファイルを
